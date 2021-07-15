@@ -8,6 +8,12 @@ body {
   font-size: 16px;
   line-height: 1.3;
   overflow-x: hidden;
+  background-image: url('../assets/body-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body > * {
+  overflow-x: hidden;
 }
 .container {
   max-width: 1344px;
@@ -64,10 +70,19 @@ h2 {
   border: none;
   padding: 8px;
   outline: none;
+  display: flex;
+  align-items: center;
+}
+.rounded-select img {
+  margin-right: 10px;
+}
+.dropdown-toggle::after {
+  margin-left: 11px !important;
 }
 .circular-btn {
   position: relative;
   min-width: 40px;
+  height: 40px;
   border-radius: 75px;
   border: 1px solid #a3a2a1;
   outline: none;
@@ -82,6 +97,12 @@ h2 {
   font-size: 10px;
   border-radius: 75px;
   padding: 5px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Header */
@@ -155,6 +176,7 @@ h2 {
 }
 .main-section .main-content .main-content_title span {
   font-size: 80px;
+  white-space: nowrap;
 }
 .main-section .main-img {
   margin-right: 7rem;
@@ -174,15 +196,18 @@ h2 {
   width: 210px;
 }
 .description-section {
-  padding: 61px 0;
+  margin-top: 50px !important;
 }
 .description-video {
-  padding: 20px;
-  border: 5px dotted #c9bab8;
-  border-radius: 40px;
-  height: 100%;
   background-color: #fff;
   background-clip: content-box;
+  border: 3px dotted #c9bab8;
+}
+.description-video iframe {
+  padding: 20px;
+  border-radius: 40px;
+  min-height: 390px;
+  width: 100%;
 }
 .description-section h2 {
   margin-bottom: 35px;
@@ -287,6 +312,14 @@ h2 {
 .rate {
   color: #ffcc30;
 }
+.view-more_button {
+  max-width: 209px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+}
 .view-more {
   width: 52%;
   margin: -15px 0 100px;
@@ -390,6 +423,12 @@ h2 {
   width: 7px;
   height: 7px;
 }
+.carousel-indicators .active-special {
+  background-color: transparent !important;
+  border: 3px solid white;
+  width: 8px;
+  height: 8px;
+}
 .carousel-indicators {
   position: static;
   margin-top: 50px;
@@ -402,7 +441,7 @@ h2 {
   background-image: url('../assets/collections.png');
   background-size: cover;
   background-repeat: no-repeat;
-
+  margin-left: 101px;
   height: 1426px;
 }
 .collection-content {
@@ -525,7 +564,6 @@ h2 {
   margin-top: 31px;
 }
 .concept-store_img {
-  background-image: url('../assets/concept.png');
 }
 /* End of concept store */
 
@@ -563,7 +601,23 @@ h2 {
   height: 7px;
 }
 .friends-imgs img {
-  max-width: 33%;
+  max-width: 80%;
+}
+.swiper-container {
+  width: 100%;
+}
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.swiper-indicators li {
+  background-color: white !important;
+  border-color: white !important;
+  border-width: 2px !important;
+}
+.swiper-indicators li.active {
+  background-color: var(--primary) !important;
 }
 /* End Friends Section */
 
@@ -602,6 +656,16 @@ h2 {
 .cta-section_button button:hover {
   background-color: #cc5405;
   border-color: #cc5405;
+}
+.cta-section_button button:focus {
+  background-color: #cc5405;
+  border-color: #cc5405;
+  box-shadow: none;
+}
+.cta-section_button button:active {
+  background-color: #cc5405 !important;
+  border-color: #cc5405 !important;
+  box-shadow: none !important;
 }
 .cta-section_button .input-group-append {
   margin-left: -206px;
@@ -644,7 +708,6 @@ h2 {
   color: #fff;
   width: 20%;
   margin-bottom: 10px;
-  text-align: center;
 }
 .footer-links div a:hover {
   color: #ff6600;
@@ -670,6 +733,9 @@ h2 {
 }
 .copyright {
   margin-top: 20px;
+}
+.special-link-footer2 {
+  white-space: pre;
 }
 /* End Footer */
 /* XXXL Screens */
@@ -747,6 +813,12 @@ h2 {
     display: block;
     padding: 10px 0;
   }
+  .special-link-footer {
+    margin-left: 0px !important;
+  }
+  .special-link-footer2 {
+    white-space: normal !important;
+  }
 }
 /* Large Screens */
 @media screen and (max-width: 992px) {
@@ -768,6 +840,9 @@ h2 {
     height: auto;
     padding-top: 55px;
     padding: 32px;
+  }
+  .main-section .main-content {
+    margin-top: 50px;
   }
   .main-section .main-content .main-content_title {
     font-size: 60px;
@@ -867,6 +942,22 @@ h2 {
   .similar-section img {
     width: 100%;
   }
+  .features-section_carousel img {
+    min-width: 31%;
+  }
+  .swiper-container {
+    width: auto;
+  }
+  .swiper-wrapper {
+    width: auto;
+  }
+  .swiper-slide {
+    width: auto !important;
+  }
+  .swiper-slide .img-fluid {
+    max-width: none;
+    height: 300px;
+  }
   .collection-section {
     background: url('../assets/collection-sm.png');
     background-position: center center;
@@ -893,9 +984,18 @@ h2 {
   .similar-section img:first-child {
     max-width: 100%;
   }
+  .main-section .main-content .main-content_title {
+    font-size: 45px;
+  }
+  .main-section .main-content .main-content_title span {
+    font-size: 55px;
+  }
 }
 /* Small */
 @media screen and (max-width: 540px) {
+  .feature-section p {
+    font-size: 9px;
+  }
   .main-section .main-img {
     max-width: 100%;
   }
@@ -916,5 +1016,70 @@ h2 {
   }
   .cta-section_button input {
     padding: 27px 0px 27px 21px;
+  }
+  .cta-section_button .input-group-append {
+    margin-left: -149px;
+  }
+  .cta-section_button button {
+    padding: 20px 45px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .reviews-section .reviews {
+    margin-top: 192%;
+  }
+  .review {
+    font-size: 12px;
+  }
+  .main-section .main-content .main-content_title {
+    font-size: 20px;
+  }
+  .main-section .main-content .main-content_title span {
+    font-size: 28px;
+  }
+  .main-section .main-content button {
+    width: 150px;
+    padding: 13.5px 24px;
+  }
+  .similar-section div h2 {
+    font-size: 30px;
+  }
+  .similar-section div p {
+    font-size: 15px;
+  }
+  .similar-section div p br {
+    display: none;
+  }
+  .review .review-quotes {
+    height: 20px;
+    margin-top: 0px;
+  }
+  .view-more_button {
+    max-width: 150px;
+    height: 30px;
+    margin-left: -7%;
+  }
+  .best-seller-section_title {
+    font-size: 30px;
+  }
+  .best-seller-section_subTitle {
+    text-align: left;
+    font-size: 15px;
+  }
+  .collection-section {
+    min-height: 1400px;
+  }
+  .cta-section_button input {
+    font-size: 13px;
+    height: 56px;
+  }
+  .special-link-footer {
+    margin-left: 0px !important;
+  }
+  .blog-section_title,
+  .concept-store_content_title {
+    font-size: 30px;
   }
 }

@@ -51,16 +51,49 @@
               <img src="./assets/logo.png" alt="Satéur Logo" />
             </a>
             <div class="d-flex navbar-right-section">
-              <select name="lang" class="rounded-select shadow">
-                <option value="en">English</option>
-                <option value="en">Francais</option>
-              </select>
+              <div class="dropdown">
+                <button
+                  class="rounded-select dropdown-toggle pr-3"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img src="./assets/usa-flag.png" />
+                  English
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">English</a>
+                  <a class="dropdown-item" href="#">Francais</a>
+                </div>
+              </div>
               <button class="circular-btn">
                 <span class="notif">0</span>
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <img
+                  src="./assets/cart.png"
+                  width="14.86px"
+                  height="16px"
+                  alt=""
+                  srcset=""
+                />
               </button>
-              <button class="circular-btn">
-                <i class="fa fa-user-o" aria-hidden="true"></i>
+
+              <button
+                class="
+                  circular-btn
+                  d-flex
+                  justify-content-center
+                  align-items-center
+                "
+              >
+                <img
+                  src="./assets/person.png"
+                  width="14.86px"
+                  height="16px"
+                  alt=""
+                  srcset=""
+                />
               </button>
             </div>
           </div>
@@ -227,7 +260,9 @@
           align-items-center
         "
       >
-        <div class="description-video w-100 w-lg-50">video here</div>
+        <div class="description-video w-100 w-lg-50">
+          <div id="player"></div>
+        </div>
         <div class="description-content w-100 w-lg-50">
           <h2 class="font-weight-bold">What is Satéur?</h2>
           <p>
@@ -766,9 +801,10 @@
       >
         <h1 class="features-section_title">Featured On</h1>
         <div class="features-section_carousel">
+          <!-- Desktop -->
           <div
             id="slider"
-            class="carousel slide"
+            class="carousel slide d-none d-lg-block"
             data-ride="carousel"
             data-interval="50000s"
           >
@@ -846,6 +882,82 @@
               <li data-target="#slider" data-slide-to="5"></li>
               <li data-target="#slider" data-slide-to="6"></li>
               <li data-target="#slider" data-slide-to="7"></li>
+            </ol>
+          </div>
+          <!-- Mobile -->
+          <div
+            id="slider3"
+            class="carousel slide d-lg-none"
+            data-ride="carousel"
+            data-interval="50000s"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex">
+                  <img class="img-fluid" src="./assets/carousel1.png" />
+                  <img class="img-fluid" src="./assets/carousel2.png" />
+                  <img class="img-fluid" src="./assets/carousel3.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img class="img-fluid" src="./assets/carousel1.png" />
+                  <img class="img-fluid" src="./assets/carousel2.png" />
+                  <img class="img-fluid" src="./assets/carousel3.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img class="img-fluid" src="./assets/carousel1.png" />
+                  <img class="img-fluid" src="./assets/carousel2.png" />
+                  <img class="img-fluid" src="./assets/carousel3.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img class="img-fluid" src="./assets/carousel1.png" />
+                  <img class="img-fluid" src="./assets/carousel2.png" />
+                  <img class="img-fluid" src="./assets/carousel3.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img class="img-fluid" src="./assets/carousel1.png" />
+                  <img class="img-fluid" src="./assets/carousel2.png" />
+                  <img class="img-fluid" src="./assets/carousel3.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img class="img-fluid" src="./assets/carousel1.png" />
+                  <img class="img-fluid" src="./assets/carousel2.png" />
+                  <img class="img-fluid" src="./assets/carousel3.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img class="img-fluid" src="./assets/carousel1.png" />
+                  <img class="img-fluid" src="./assets/carousel2.png" />
+                  <img class="img-fluid" src="./assets/carousel3.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img class="img-fluid" src="./assets/carousel1.png" />
+                  <img class="img-fluid" src="./assets/carousel2.png" />
+                  <img class="img-fluid" src="./assets/carousel3.png" />
+                </div>
+              </div>
+            </div>
+            <ol class="carousel-indicators d-lg-none">
+              <li data-target="#slider3" data-slide-to="0" class="active"></li>
+              <li data-target="#slider3" data-slide-to="1"></li>
+              <li data-target="#slider3" data-slide-to="2"></li>
+              <li data-target="#slider3" data-slide-to="3"></li>
+              <li data-target="#slider3" data-slide-to="4"></li>
+              <li data-target="#slider3" data-slide-to="5"></li>
+              <li data-target="#slider3" data-slide-to="6"></li>
+              <li data-target="#slider3" data-slide-to="7"></li>
             </ol>
           </div>
         </div>
@@ -1111,34 +1223,16 @@
             </p>
             <p>generation of sparkling stone!</p>
           </div>
-          <div>
-            <div class="features-section_carousel">
-              <div id="slider" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="d-flex justify-content-center friends-imgs">
-                      <img src="./assets/friend1.jpg" />
-                      <img src="./assets/friend2.jpg" />
-                      <img src="./assets/friend3.jpg" />
-                    </div>
-                  </div>
-                </div>
-                <ol class="carousel-indicators">
-                  <li
-                    data-target="#slider"
-                    data-slide-to="0"
-                    class="active"
-                  ></li>
-                  <li data-target="#slider" data-slide-to="1"></li>
-                  <li data-target="#slider" data-slide-to="2"></li>
-                  <li data-target="#slider" data-slide-to="3"></li>
-                  <li data-target="#slider" data-slide-to="4"></li>
-                  <li data-target="#slider" data-slide-to="5"></li>
-                  <li data-target="#slider" data-slide-to="6"></li>
-                  <li data-target="#slider" data-slide-to="7"></li>
-                </ol>
+          <!-- Swiper -->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="d-none">
+                <img src="./assets/friend1.jpg" />
+                <img src="./assets/friend2.jpg" />
+                <img src="./assets/friend3.jpg" />
               </div>
             </div>
+            <ol class="carousel-indicators swiper-indicators"></ol>
           </div>
         </div>
       </div>
@@ -1253,8 +1347,10 @@
               <a href="#">FAQs</a>
               <a href="#">Contact</a>
               <a href="#">Return Policy</a>
-              <a href="#">Terms and Conditions</a>
-              <a href="#">Privacy Policy</a>
+              <a href="#" class="special-link-footer2">Terms and Conditions</a>
+              <a href="#" style="margin-left: 58px" class="special-link-footer"
+                >Privacy Policy</a
+              >
             </div>
           </div>
           <div
@@ -1305,6 +1401,11 @@
     ></script>
     <script src="https://use.fontawesome.com/09d5620174.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/playerjs.js"></script>
+    <script>
+      var player = new Playerjs({ id: 'player', file: './assets/video.mp4' });
+    </script>
     <script src="./js/main.js"></script>
   </body>
 </html>

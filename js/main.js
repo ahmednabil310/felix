@@ -88,3 +88,34 @@ ScrollReveal().reveal('.cta-section', {
   opacity: 0,
   easing: 'ease-in',
 });
+const imgs = $('.swiper-wrapper .d-none img');
+
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 3,
+  centeredSlides: true,
+  spaceBetween: 20,
+  virtual: {
+    slides: (function () {
+      const slides = [];
+      for (var i = 0; i < imgs.length; i += 1) {
+        slides.push(`<img class="img-fluid" src=${imgs[i].src}>`);
+      }
+      return slides;
+    })(),
+  },
+});
+
+swiper.slideTo(1, 0);
+
+for (var i = 0; i < imgs.length; i += 1) {
+  $('.swiper-indicators').append(`<li class="slide-${i + 1}"></li>`);
+}
+
+$(`.swiper-indicators .slide-2`).addClass('active-special');
+
+$(`.swiper-indicators li`).click(function () {
+  const slideNum = parseInt(this.className.split('-')[1]);
+  swiper.slideTo(slideNum - 1, 0);
+  $(`.swiper-indicators li`).removeClass('active-special');
+  $(`.swiper-indicators .slide-${slideNum}`).addClass('active-special');
+});
