@@ -181,6 +181,9 @@ h2 {
 .main-section .main-img {
   margin-right: 7rem;
 }
+.main-section .main-img-sm {
+  display: none;
+}
 .main-contet_buttonContainer {
   margin-top: 39px;
 }
@@ -202,6 +205,8 @@ h2 {
   background-color: #fff;
   background-clip: content-box;
   border: 3px dotted #c9bab8;
+  padding: 10px;
+  border-radius: 15px;
 }
 .description-video iframe {
   padding: 20px;
@@ -853,9 +858,14 @@ h2 {
   .main-section .main-img {
     max-width: 65%;
     margin: 0 auto;
+    display: none;
+  }
+  .main-section .main-img-sm {
+    display: block;
   }
   .description-section {
     padding: 61px 15px;
+    margin-top: 0px !important;
   }
   .description-content {
     padding-left: 0;
